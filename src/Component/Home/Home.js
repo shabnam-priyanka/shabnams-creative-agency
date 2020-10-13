@@ -15,6 +15,7 @@ import FooterBottom from './FooterBottom/FooterBottom';
 // then awesome services component 
 // then worked on our work 
 // then clients feedback
+// and footer bottom finally main page done
 
 const Home = () => {
     return (
