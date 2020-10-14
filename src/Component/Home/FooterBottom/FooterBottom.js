@@ -4,14 +4,19 @@ import './FooterBottom.css';
 
 const FooterBottom = () => {
     return (
-        <div style={{ backgroundColor: '#FBD062', height: '500px' }}>
+        <div style={{ backgroundColor: '#FBD062' }}>
 
-            <div className='d-flex' style={{ margin: '40px', padding: '40px' }}>
-                <div>
+           <div>
+           <div className='d-flex' style={{ margin: '40px', padding: '40px' }}>
+                <div className ='d-flex align-items-center' >
+                    <div>
                     <h1>Let us handle your project, professionally. </h1>
                     <p>With well written codes, we build amazing apps for
                     all platforms, mobile and web apps in general.</p>
+                    </div>
+                    
                 </div>
+                
 
                 <form style={{ margin: '40px', padding: '40px' }}>
 
@@ -21,7 +26,7 @@ const FooterBottom = () => {
                     <input type='text' name='name' placeholder=' Your name/company name' className='long' />
                     <br />
                     <br />
-                    <input type='text' name='msg' placeholder='Your message ' className='long' required />
+                    <input type='text' name='msg' placeholder='Your message ' className='long p-5' required />
 
                     <br />
                     <br />
@@ -29,11 +34,12 @@ const FooterBottom = () => {
                     <br />
                     <br />
                 </form>
-                
             </div>
+            
+    
+           </div>
 
-            <p >Copyright {(new Date()).getFullYear()} All Rights Reserved</p>
-
+           <p className = 'text-center p-3 mt-0' >Copyright {(new Date()).getFullYear()} All Rights Reserved</p>
         </div>
     );
 };

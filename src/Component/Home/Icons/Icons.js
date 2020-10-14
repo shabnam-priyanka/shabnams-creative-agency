@@ -1,34 +1,14 @@
-import React from 'react';
-import airbnb from '../../../images/logos/airbnb.png';
-import slack from '../../../images/logos/slack.png';
-import google from '../../../images/logos/google.png';
-import netflix from '../../../images/logos/netflix.png';
-import uber from '../../../images/logos/uber.png';
+import React, { useEffect } from 'react';
 import './Icons.css';
+import { useState } from 'react';
 
 const Icons = () => {
-    const icons = [
-        {
-            icon: airbnb,
-        },
-        {
-            icon: slack,
-        },
-        
-        {
-            icon: netflix,
-            
-        },
-        {
-            icon: uber,
-            
-        },
-        {
-            icon: google,
-            
-        }
-    ]
-
+    const [icons, setIcons] = useState([])
+    useEffect(()=>{
+        fetch('http://localhost:5002/icon')
+        .then(response => response.json())
+        .then(data => setIcons(data))
+    },[])
 
 
     return (

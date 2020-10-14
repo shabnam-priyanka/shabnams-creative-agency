@@ -1,39 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card} from 'react-bootstrap';
-import cus1 from '../../../images/customer-1.png';
-import cus2 from '../../../images/customer-2.png';
-import cus3 from '../../../images/customer-3.png';
+import { Link } from "react-router-dom";
 
-
-
-const Feedback = [
-    {
-        image: cus1,
-        title: 'Web & Mobile design',
-        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, ad omnis! Excepturi temporibus labore iusto molestias nesciunt accusamus voluptate corporis beatae laudantium tenetur esse est aspernatur, sunt ab tempora numquam!',
-    },
-    {
-        image: cus2,
-        title: 'Web & Mobile design',
-        description: 'We Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, ad omnis! Excepturi temporibus labore iusto molestias nesciunt accusamus voluptate corporis beatae laudantium tenetur esse est aspernatur, sunt ab tempora numquam! stunning and amazing web UI, using a well drafted UX to fit your product.',
-    },
-    {
-        image: cus3,
-        title: 'Web & Mobile design',
-        description:'We Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, ad omnis! Excepturi temporibus labore iusto molestias nesciunt accusamus voluptate corporis beatae laudantium tenetur esse est aspernatur, sunt ab tempora numquam! stunning and amazing web UI, using a well drafted UX to fit your product.',
-
-    }
-]
-
+//this page is in home page when clicked customer can review
 
 const ClientsFeedback = () => {
+
+    const [feedback, setFeedback] = useState([])
+    useEffect(()=>{
+        fetch('http://localhost:5002/feedback')
+        .then(response => response.json())
+        .then(data => setFeedback(data))
+    },[])
     return (
-        <div className='services  '>
+        <div className='services  container'>
         <h2>Provide awesome services</h2>
 
-        <div className='d-flex justify-content-center mt-5 mb-5' >
+        <div className='d-flex justify-content-around container mt-5 mb-5' >
         {
-            Feedback.map(client => <Card style={{ width: '18rem' }} >
+            feedback.map(client => <Link to="/review"> <Card style={{ width: '18rem' }} className='box' >
                 
                 <Card.Body className='text-center'>
                     <Card.Img variant="top" src={client.image} className='w-25 ' />
@@ -43,7 +28,7 @@ const ClientsFeedback = () => {
                     </Card.Text>
                     
                 </Card.Body>
-            </Card>)
+            </Card></Link> )
         }
         </div>
 

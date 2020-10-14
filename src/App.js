@@ -10,6 +10,9 @@ import './App.css';
 import Home from './Component/Home/Home';
 import Login from './Component/Login/Login';
 import ServicesDetail from './Component/ServicesDetail/ServicesDetail';
+import OrderStatus from './Component/OrderStatus/OrderStatus';
+import Review from './Component/Review/Review';
+import AdminPanel from './Component/AdminPanel/AdminPanel';
 
 
 
@@ -36,15 +39,15 @@ function App() {
           <Route path="/servicedetails">
           <ServicesDetail></ServicesDetail>
           </Route>
-          <Route path="/volunteerdetails">
-
+          <Route path="/orderstatus">
+          <OrderStatus></OrderStatus>
           </Route>
-          <Route path="/volunteeractivity">
-
+          <Route path="/review">
+          <Review></Review>
           </Route>
 
           <Route path="/adminpanel">
-
+            <AdminPanel></AdminPanel>
           </Route>
           <Route exact path="/">
             <Home></Home>

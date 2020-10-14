@@ -1,44 +1,25 @@
-import React from 'react';
-import service1 from '../../../images/icons/service1.png';
-import service2 from '../../../images/icons/service2.png';
-import service3 from '../../../images/icons/service3.png';
+import React, { useEffect, useState } from 'react';
 import { Card} from 'react-bootstrap';
 import './AwesomeServices.css';
+import { Link } from "react-router-dom";
 
-
-const services = [
-    {
-        image: service1,
-        title: 'Web & Mobile design',
-        description: 'We craft stunning and amazing web UI, using a well drafted UX to fit your product.',
-
-
-    },
-    {
-        image: service2,
-        title: 'Web & Mobile design',
-        description: 'We craft stunning and amazing web UI, using a well drafted UX to fit your product.',
-
-    },
-    {
-        image: service3,
-        title: 'Web & Mobile design',
-        description: 'We craft stunning and amazing web UI, using a well drafted UX to fit your product.',
-
-    }
-]
 
 const AwesomeServices = () => {
 
-
+    const [service, setService] = useState([])
+    useEffect(()=>{
+        fetch('http://localhost:5002/service')
+        .then(response => response.json())
+        .then(data => setService(data))
+    },[])
 
     return (
-        <div className='services  '>
-            <h2>Provide awesome services</h2>
+        <div className='services container '>
+            <h2>Provide awesome <span className='text-color' >services</span> </h2>
 
-            <div className='d-flex justify-content-center mt-5 ' >
+            <div className='d-flex justify-content-around container mt-5 ' >
             {
-                services.map(awesome => <Card style={{ width: '18rem' }} >
+                service.map(awesome =><Link to="/servicedetails"><Card style={{ width: '18rem' }}  className='box' >
                     
                     <Card.Body className='text-center'>
                         <Card.Img variant="top" src={awesome.image} className='w-25 ' />
@@ -48,7 +29,7 @@ const AwesomeServices = () => {
                         </Card.Text>
                         
                     </Card.Body>
-                </Card>)
+                </Card></Link>  )
             }
             </div>
 

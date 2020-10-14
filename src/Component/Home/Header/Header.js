@@ -7,16 +7,16 @@ import logo from '../../../images/logos/logo.png';
 
 const Header = () => {
     return (
-        //bg="primary" variant="dark"
+    
         <div className=''>
 
             <Navbar>
                 <Navbar.Brand href="#home"><img style={{ height: '60px' }} src={logo} alt="" /> </Navbar.Brand>
                 <Nav className="mr-auto" style={{ marginLeft: '800px' }}>
-                    <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="#donation">Our Portfolio</Nav.Link>
-                    <Nav.Link href="#events">Our Team</Nav.Link>
-                    <Nav.Link href="#blog">Contact Us</Nav.Link>
+                    <Nav.Link href="/home">Home</Nav.Link>
+                    <Nav.Link href="#our portfolio">Our Portfolio</Nav.Link>
+                    <Nav.Link href="#our team">Our Team</Nav.Link>
+                    <Nav.Link href="#Contact us">Contact Us</Nav.Link>
     
                     <Link to='/login'>
                         <Button variant='dark' className='ml-3' >Login</Button>
