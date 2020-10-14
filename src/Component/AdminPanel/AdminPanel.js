@@ -55,7 +55,11 @@ const AdminPanel = () => {
                             <td>shabz</td>
                             <td>shabz</td>
                             <td>shabz</td>
-                            <td ><img src={trash} className="bg-danger" style={{ cursor: 'pointer', height: '3vh' }} alt="" /></td>
+                            <select>
+                                <option> pending</option> 
+                                <option className="text-color" > Done</option> 
+                                <option> Ongoing</option> 
+                            </select>
                         </tr>
                     </tbody>
                 </table>

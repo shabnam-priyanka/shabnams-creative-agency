@@ -1,11 +1,10 @@
-.body{
-    background-color: black;
-}
+
 
 .work{
     margin-top: 100px;
     text-align: center;
     margin-bottom: 100px;
+    background-color: #111430;
 }
 .carousel-inner img {
     margin: auto;

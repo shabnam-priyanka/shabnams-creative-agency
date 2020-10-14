@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Card} from 'react-bootstrap';
 import { Link } from "react-router-dom";
 
-//this page is in home page when clicked customer can review
+//this page is in home page when clicked customer 
+//can review but this is in home component
 
 const ClientsFeedback = () => {
 
@@ -14,7 +15,7 @@ const ClientsFeedback = () => {
     },[])
     return (
         <div className='services  container'>
-        <h2>Provide awesome services</h2>
+        <h2>Clients <span className='text-color'>Feedback</span> </h2>
 
         <div className='d-flex justify-content-around container mt-5 mb-5' >
         {

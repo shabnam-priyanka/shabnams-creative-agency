@@ -8,7 +8,7 @@ import { Carousel } from 'react-bootstrap';
 const OurWork = () => {
     return (
         <div className='work '>
-            <h1>Here are some of our works</h1>
+            <h1> <span style={{color:'white'}} >Here are some of  </span> <span className='text-color'>our works</span> </h1>
 
             <div >
             <Carousel >

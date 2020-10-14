@@ -3,7 +3,7 @@ import { Card} from 'react-bootstrap';
 import './AwesomeServices.css';
 import { Link } from "react-router-dom";
 
-
+//this is in home page where provide awesome service located
 const AwesomeServices = () => {
 
     const [service, setService] = useState([])

@@ -2,11 +2,27 @@ import React from 'react';
 import logo from '../../images/logos/logo.png';
 import { Link } from "react-router-dom";
 import { Button } from 'react-bootstrap';
+import { useForm } from "react-hook-form";
 
 //this page is for customer to give review
 //and submit. this will update in home page review section
 
+
 const Review = () => {
+    const { register, handleSubmit } = useForm();
+    const onSubmit = data =>{
+        fetch('http://localhost:5002/review', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data) 
+        })
+        .then(response=> response.json())
+        .then(data => alert('review') )
+        console.log(data)
+    };
+
     return (
         <div>
             
@@ -18,22 +34,19 @@ const Review = () => {
                     <Link to="/review"> <h6>Review</h6></Link>
                 </div>
                 <div className='style p-5 mb-5 mr-5' >
-                    <form style={{ margin: '40px', padding: '40px' }}>
-
-                        <input type='email' name='email' placeholder='Your email address' className='long' required />
-                        <br />
-                        <br />
-                        <input type='text' name='name' placeholder=' Your name/company name' className='long' />
-                        <br />
-                        <br />
-                        <input type='text' name='msg' placeholder='Your message ' className='long p-5' required />
-
-                        <br />
-                        <br />
-                        <Button variant='dark' >Send </Button>
-                        <br />
-                        <br />
-                    </form>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <input type='text' name="Name" placeholder='Your Name' ref={register} className ='long'/>
+                    <br/>
+                    <br/>
+                    <input type="text" name="company" placeholder = 'Company Name' ref={register} className='long' />
+                    <br/>
+                    <br/>
+                    <input type="text" name="description" placeholder = 'description' ref={register} className ='long pt-5'/>
+                    <br/>
+                    <br/>
+    
+                    <button type="submit" class="btn btn-dark">Submit</button>
+                </form>
                 </div>
             </div>
         </div>
