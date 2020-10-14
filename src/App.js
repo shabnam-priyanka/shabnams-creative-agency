@@ -13,6 +13,7 @@ import ServicesDetail from './Component/ServicesDetail/ServicesDetail';
 import OrderStatus from './Component/OrderStatus/OrderStatus';
 import Review from './Component/Review/Review';
 import AdminPanel from './Component/AdminPanel/AdminPanel';
+import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
 
 
 
@@ -36,9 +37,9 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
-          <Route path="/servicedetails">
+          <PrivateRoute path="/servicedetails">
           <ServicesDetail></ServicesDetail>
-          </Route>
+          </PrivateRoute>
           <Route path="/orderstatus">
           <OrderStatus></OrderStatus>
           </Route>

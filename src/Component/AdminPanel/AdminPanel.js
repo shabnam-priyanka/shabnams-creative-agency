@@ -51,10 +51,10 @@ const AdminPanel = () => {
                     <tbody>
 
                         <tr className="bg-light" >
-                            <td> shabz</td>
-                            <td>shabz</td>
-                            <td>shabz</td>
-                            <td>shabz</td>
+                            <td> Kolmilota</td>
+                            <td>kolmilota</td>
+                            <td>Graphic Design</td>
+                            <td>Lorem ipsum dolor sit amet consectetur </td>
                             <select>
                                 <option> pending</option> 
                                 <option className="text-color" > Done</option> 

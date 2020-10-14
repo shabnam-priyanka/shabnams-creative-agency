@@ -46,7 +46,7 @@ const ServicesDetail = () => {
                     <input type="text" name="graphic" placeholder = 'Graphic Design' ref={register} className ='long'/>
                     <br/>
                     <br/>
-                    <input type="email" name="project" placeholder = 'Project Details' ref={register} className =' long pt-5'/>
+                    <input type="text" name="project" placeholder = 'Project Details' ref={register} className =' long pt-5'/>
                     <br/>
                     <br/>
                     <input type="text" name="price" placeholder = 'Price' /><input type='file' />
