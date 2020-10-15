@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../images/logos/logo.png';
-//import './Header.css'
 import { UserContext } from '../../../App';
 
 const Header = () => {
@@ -19,10 +18,13 @@ const Header = () => {
                             <p className="nav-link" >Home <span className="sr-only">(current)</span></p>
                         </li>
                         <li className="nav-item">
-                            <p className="nav-link" >Features</p>
+                            <p className="nav-link" >Our Portfolio</p>
                         </li>
                         <li className="nav-item">
-                            <p className="nav-link">Pricing</p>
+                            <p className="nav-link" >Our Team</p>
+                        </li>
+                        <li className="nav-item">
+                            <p className="nav-link">Contact Us</p>
                         </li>
                         <li className="nav-item">
                             <Link to="/login">

@@ -14,7 +14,7 @@ const Icons = () => {
     return (
         <div className='text-center'>
             {
-                icons.map(con => <img src={con.icon} alt="" className="mt-5 ml-5 icons"  /> )
+                icons.map(con => <img src={con.icon} alt="" className="mt-5 ml-5 icons img-fluid"  /> )
             }
         </div>
     );

@@ -14,21 +14,21 @@ const OurWork = () => {
             <Carousel >
                 <Carousel.Item interval={500}>
                     <img
-                        className="d-block w-25 mt-5"
+                        className="d-block w-25 mt-5 img-fluid"
                         src={pic1}
                         alt="First slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item interval={500}>
                     <img
-                        className="d-block w-25 mt-5"
+                        className="d-block w-25 mt-5 img-fluid"
                         src={pic2}
                         alt="Third slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-25 mt-5"
+                        className="d-block w-25 mt-5 img-fluid"
                         src={pic3}
                         alt="Third slide"
                     />

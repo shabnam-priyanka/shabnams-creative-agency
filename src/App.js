@@ -15,6 +15,7 @@ import Review from './Component/Review/Review';
 import AdminPanel from './Component/AdminPanel/AdminPanel';
 import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
 import AddService from './Component/AddService/AddService';
+import AddAdmin from './AddAdmin/AddAdmin';
 
 
 
@@ -52,6 +53,9 @@ function App() {
           </Route>
           <Route path="/adminpanel">
             <AdminPanel></AdminPanel>
+          </Route>
+          <Route path="/addadmin">
+            <AddAdmin></AddAdmin>
           </Route>
           <Route exact path="/">
             <Home></Home>

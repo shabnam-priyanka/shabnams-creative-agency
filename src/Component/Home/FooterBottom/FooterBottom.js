@@ -41,7 +41,7 @@ const FooterBottom = () => {
 
             </div>
 
-            <p className='text-center p-3 mt-0' >Copyright {(new Date()).getFullYear()} All Rights Reserved</p>
+            <p className='text-center p-3 mt-0' >Copyright Orange labs {(new Date()).getFullYear()} </p>
         </div>
     );
 };

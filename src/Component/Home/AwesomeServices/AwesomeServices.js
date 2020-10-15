@@ -17,10 +17,10 @@ const AwesomeServices = () => {
         <div className='services container '>
             <h2>Provide awesome <span className='text-color' >services</span> </h2>
 
-            <div className='d-flex justify-content-around container mt-5 ' >
+            <div className='d-flex flex-wrap justify-content-around container mt-5 mb-5' >
             {
                 service.map(awesome =><Link to="/servicedetails" style={{textDecoration:"none", color:'black'}}>
-                    <div>
+                    <div className='col-md-4 m-3'>
                     <Card style={{ width: '18rem' }}  className='box' >
                     <Card.Body className='text-center'>
                         <Card.Img variant="top" src={awesome.image} className='w-25 ' />

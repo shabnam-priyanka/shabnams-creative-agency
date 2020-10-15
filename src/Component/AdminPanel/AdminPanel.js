@@ -15,12 +15,12 @@ const AdminPanel = () => {
 
     return (
 <div>
-        <img src={logo} alt=""  className='logo mt-5'/>
+        <img src={logo} alt=""  className='logo mt-5 img-fluid'/>
 
         <div className="m-5">
             
             <aside style={{ marginTop: '10vh', zIndex: '-1' }}>
-                <Link to="servicedetails">
+                <Link to="/">
                     <div className="d-flex mt-3" style={{ cursor: 'pointer' }}>
                     <i class="fas fa-shopping-basket pl-5 mr-2"></i>
                         <h6>Service List</h6>
@@ -34,7 +34,7 @@ const AdminPanel = () => {
                     </div>
                 </Link>
                 
-                <Link to='/admin' style={{ textDecoration: 'none' }}>
+                <Link to='/addadmin' style={{ textDecoration: 'none' }}>
                     <div className="d-flex">
                     <i class="fas fa-user-shield pl-5 mr-2"></i>    
                         <h6>Make Admin</h6>
