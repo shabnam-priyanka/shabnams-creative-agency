@@ -26,7 +26,7 @@ function App() {
   return (
 
     <div>
-      <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <UserContext.Provider value={{loggedInUser, setLoggedInUser}}>
       <Router>
 
         <Switch>

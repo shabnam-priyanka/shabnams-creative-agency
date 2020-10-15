@@ -11,7 +11,7 @@ import { useForm } from "react-hook-form";
 const ServicesDetail = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data =>{
-        fetch('http://localhost:5002/addService', {
+        fetch('http://localhost:5002/addOrder', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -26,7 +26,7 @@ const ServicesDetail = () => {
 
     return (
         <div>
-            <img src={logo} alt="" className='logo mt-5' />
+            <img src={logo} alt="" className='logo mt-5 img-fluid' />
 
             <div className='d-flex' >
                 <div className='details' >
@@ -36,7 +36,7 @@ const ServicesDetail = () => {
                     <Link to="/review"> <h6>Review</h6></Link>
                 </div>
                 <div className='style p-5 mb-5 mr-5' >
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form onSubmit={handleSubmit(onSubmit)} className="container container-fluid">
                     <input type='text' name="Name" placeholder='Your Name' ref={register} className ='long'/>
                     <br/>
                     <br/>
@@ -56,11 +56,7 @@ const ServicesDetail = () => {
                 </form>
                 </div>
             </div>
-                    {/* <select name="gender" ref={register}>
-                        <option value="female">female</option>
-                        <option value="male">male</option>
-                        <option value="other">other</option>
-                    </select> */}
+            
         </div>
 
     );

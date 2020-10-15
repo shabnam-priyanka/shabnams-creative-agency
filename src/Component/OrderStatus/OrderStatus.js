@@ -6,7 +6,7 @@ import { UserContext } from '../../App';
 //this is order status after customer has chosen the category
 ///NOT WORKING 
 const OrderStatus = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const {loggedInUser, setLoggedInUser} = useContext(UserContext);
     const [status, setStatus] = useState([])
     useEffect(()=>{
         fetch(`http://localhost:5002/orderstatus?email=${loggedInUser.email} `)

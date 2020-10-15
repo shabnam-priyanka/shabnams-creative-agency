@@ -8,7 +8,7 @@ const AwesomeServices = () => {
 
     const [service, setService] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:5002/service')
+        fetch('http://localhost:5002/allService')
         .then(response => response.json())
         .then(data => setService(data))
     },[])
@@ -19,8 +19,9 @@ const AwesomeServices = () => {
 
             <div className='d-flex justify-content-around container mt-5 ' >
             {
-                service.map(awesome =><Link to="/servicedetails"><Card style={{ width: '18rem' }}  className='box' >
-                    
+                service.map(awesome =><Link to="/servicedetails" style={{textDecoration:"none", color:'black'}}>
+                    <div>
+                    <Card style={{ width: '18rem' }}  className='box' >
                     <Card.Body className='text-center'>
                         <Card.Img variant="top" src={awesome.image} className='w-25 ' />
                         <Card.Title>{awesome.title} </Card.Title>
@@ -29,7 +30,9 @@ const AwesomeServices = () => {
                         </Card.Text>
                         
                     </Card.Body>
-                </Card></Link>  )
+                </Card>
+                    </div>
+                </Link>  )
             }
             </div>
 

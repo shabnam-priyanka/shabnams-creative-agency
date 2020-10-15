@@ -17,10 +17,11 @@ const ClientsFeedback = () => {
         <div className='services  container'>
         <h2>Clients <span className='text-color'>Feedback</span> </h2>
 
-        <div className='d-flex justify-content-around container mt-5 mb-5' >
+        <div className='d-flex flex-wrap justify-content-around container mt-5 mb-5' >
         {
-            feedback.map(client => <Link to="/review"> <Card style={{ width: '18rem' }} className='box' >
-                
+            feedback.map(client => <Link style={{textDecoration:"none", color:'black'}} to="/review">
+                <div className='col-md-4 m-3'> 
+                <Card style={{ width: '18rem' }} className='box' >
                 <Card.Body className='text-center'>
                     <Card.Img variant="top" src={client.image} className='w-25 ' />
                     <Card.Title>{client.title} </Card.Title>
@@ -29,7 +30,9 @@ const ClientsFeedback = () => {
                     </Card.Text>
                     
                 </Card.Body>
-            </Card></Link> )
+                </Card>
+                </div>
+                </Link> )
         }
         </div>
 

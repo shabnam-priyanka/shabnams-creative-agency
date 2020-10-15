@@ -12,7 +12,7 @@ import logo from '../../images/logos/logo.png';
 firebase.initializeApp(firebaseConfig);
 
 const Login = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const {loggedInUser, setLoggedInUser} = useContext(UserContext);
 
 
 
@@ -54,13 +54,13 @@ const Login = () => {
         <div>
 
             <div>
-                <img src={logo} alt="" className='logos' />
+                <img className="img-fluid " src={logo} alt="" className='logos' />
             </div>
 
-            <div className='style' onClick={googleSignIn} style={{ cursor: "pointer" }} >
-                <h1 >Login with google</h1>
+            <div className='login p-5' onClick={googleSignIn} style={{ cursor: "pointer" }} >
+                <h3 >Login with</h3>
 
-                <img src={google} alt="" style={{ height: '25px', width: '30px' }} /> Login with Google+
+                <img className="img-fluid " src={google} alt="" style={{ height: '25px', width: '30px' }} /> Login with Google+
 
             <p>Don't have account? create account</p>
 
