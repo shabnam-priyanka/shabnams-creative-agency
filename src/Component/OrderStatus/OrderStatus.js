@@ -20,9 +20,20 @@ const OrderStatus = () => {
             <img src={logo} alt="" className='logo mt-5'/>
             <div className ='d-flex' >
             <div className ='details'>
-            <Link to="/servicedetails"> <h6>Order</h6></Link>
-            <Link to="/servicedetails"> <h6>Service list</h6></Link>
-            <Link to="/review"> <h6>Review</h6></Link>
+            <aside className='mt-5 sidebar'>
+                <div className="d-flex mt-3">
+                    <i class="fa fa-shopping-cart pl-5 mr-2"></i>
+                    <Link to="/orderstatus"> <h6> Order</h6></Link>
+                </div>
+                <div className="d-flex mt-3">
+                    <i class="fas fa-shopping-basket pl-5 mr-2"></i>
+                    <Link to="/servicedetails"> <h6> Service list</h6></Link>
+                </div>
+                <div className="d-flex mt-3">
+                    <i class="fas fa-comment-dots fa-flip-horizontal pr-5 mr-2"></i>
+                    <Link to="/review"> <h6> Review</h6></Link>
+                </div>
+            </aside>
             </div>
             <div className ='style p-5 mb-5 mr-5' >
                 <h1>Order </h1>

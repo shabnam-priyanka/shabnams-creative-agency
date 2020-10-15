@@ -14,6 +14,7 @@ import OrderStatus from './Component/OrderStatus/OrderStatus';
 import Review from './Component/Review/Review';
 import AdminPanel from './Component/AdminPanel/AdminPanel';
 import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
+import AddService from './Component/AddService/AddService';
 
 
 
@@ -46,7 +47,9 @@ function App() {
           <Route path="/review">
           <Review></Review>
           </Route>
-
+          <Route path="/addservice">
+          <AddService></AddService>
+          </Route>
           <Route path="/adminpanel">
             <AdminPanel></AdminPanel>
           </Route>

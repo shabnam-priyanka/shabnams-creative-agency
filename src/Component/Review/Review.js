@@ -12,17 +12,16 @@ import { UserContext } from '../../App';
 
 const Review = () => {
     const { loggedInUser } = useContext(UserContext);
-    const [review, setReview] = useState ([]);
     const { register, handleSubmit, watch, errors } = useForm();
     
     const onSubmit = data => {
-        const img = { ...loggedInUser, ...data };
+        const info = { ...loggedInUser, ...data };
         fetch('http://localhost:5002/addReview', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(img)
+            body: JSON.stringify(info)
         })
-            .then(res => res.json(img))
+            .then(res => res.json(info))
             .then(result => {
                 if (result) {
                     alert('successfully submitted')
@@ -40,7 +39,7 @@ const Review = () => {
             </div>
             <aside className='mt-5 sidebar'>
                 <div className="d-flex mt-3">
-                    <i class="fas fa-shopping-cart pl-5 mr-2"></i>
+                    <i class="fa fa-shopping-cart pl-5 mr-2"></i>
                     <Link to="/orderstatus"> <h6> Order</h6></Link>
                 </div>
                 <div className="d-flex mt-3">
@@ -55,10 +54,10 @@ const Review = () => {
             <main >
                 <form className="container container-fluid" onSubmit={handleSubmit(onSubmit)}>
                     <input name="Name" className="p-4 form-control" defaultValue={loggedInUser.name} ref={register} /> <br />
-                    <input name="company" className="p-4 form-control" placeholder="Your Company's name, designation" ref={register({ required: true })} /> <br />
-                    
-                    {errors.exampleRequired && <span>This field is required</span>}
-                    <input name="description" className="form-control" placeholder='Description' style={{ height: "20vh" }} ref={register} /> <br />
+                    <input name="company" className="p-4 form-control" placeholder="Your Company's name, designation" ref={register({ required: true })} />
+                    <br />
+                    <input name="description" className="form-control" placeholder='Description' style={{ height: "20vh" }} ref={register} /> 
+                    <br />
                     <input className="pr-5 pl-5 bg-dark text-white pt-2 pb-2" style={{ borderRadius: "5px" }} type="submit" />
                 </form>
             </main>
