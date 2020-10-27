@@ -8,7 +8,7 @@ const AddAdmin = () => {
 
     const { register, handleSubmit } = useForm();
     const onSubmit = data =>{
-        fetch('http://localhost:5002/addadmin', {
+        fetch('https://serene-temple-56394.herokuapp.com/addadmin', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

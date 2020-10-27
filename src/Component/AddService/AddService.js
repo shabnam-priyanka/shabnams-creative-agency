@@ -11,7 +11,7 @@ const AddService = () => {
     
     const onSubmit = data => {
         const info = { ...loggedInUser, ...data };
-        fetch('http://localhost:5002/addService', {
+        fetch('https://serene-temple-56394.herokuapp.com/addService', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(info)

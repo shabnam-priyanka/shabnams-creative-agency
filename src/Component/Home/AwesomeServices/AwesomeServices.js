@@ -8,7 +8,7 @@ const AwesomeServices = () => {
 
     const [service, setService] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:5002/allService')
+        fetch('https://serene-temple-56394.herokuapp.com/allService')
         .then(response => response.json())
         .then(data => setService(data))
     },[])

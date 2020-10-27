@@ -5,7 +5,7 @@ import { useState } from 'react';
 const Icons = () => {
     const [icons, setIcons] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:5002/icon')
+        fetch('https://serene-temple-56394.herokuapp.com/icon')
         .then(response => response.json())
         .then(data => setIcons(data))
     },[])

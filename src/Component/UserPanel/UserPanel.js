@@ -11,7 +11,7 @@ import { useForm } from "react-hook-form";
 const UserPanel = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data =>{
-        fetch('http://localhost:5002/addOrder', {
+        fetch('https://serene-temple-56394.herokuapp.com/addOrder', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

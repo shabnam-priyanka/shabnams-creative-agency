@@ -9,7 +9,7 @@ const OrderStatus = () => {
     const {loggedInUser, setLoggedInUser} = useContext(UserContext);
     const [status, setStatus] = useState([])
     useEffect(()=>{
-        fetch(`http://localhost:5002/orderstatus?email=${loggedInUser.email} `)
+        fetch(`https://serene-temple-56394.herokuapp.com/orderstatus?email=${loggedInUser.email} `)
         .then(response => response.json())
         .then(data => setStatus(data))
     },[])

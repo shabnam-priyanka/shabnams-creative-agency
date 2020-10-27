@@ -9,7 +9,7 @@ const ClientsFeedback = () => {
 
     const [feedback, setFeedback] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:5002/feedback')
+        fetch('https://serene-temple-56394.herokuapp.com/feedback')
         .then(response => response.json())
         .then(data => setFeedback(data))
     },[])

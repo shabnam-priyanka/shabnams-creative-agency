@@ -7,7 +7,7 @@ const AdminPanel = () => {
     
     const [allUser, setAllUser] = useState([])
     useEffect(()=>{
-        fetch(`http://localhost:5002/showallorder`)
+        fetch(`https://serene-temple-56394.herokuapp.com/showallorder`)
         .then(response => response.json())
         .then(data => setAllUser(data))
     },[])

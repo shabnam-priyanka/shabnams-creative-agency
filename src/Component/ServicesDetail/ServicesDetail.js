@@ -7,7 +7,7 @@ const ServicesDetail = () => {
     const {loggedInUser, setLoggedInUser} = useContext(UserContext);
     const [admin, setAdmin] = useState([])
     useEffect(()=>{
-        fetch(`http://localhost:5002/adminEmail?email=${loggedInUser.email}`)
+        fetch(`https://serene-temple-56394.herokuapp.com/adminEmail?email=${loggedInUser.email}`)
         .then(response => response.json())
         .then(data => setAdmin(data))
     },[])
